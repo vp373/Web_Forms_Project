@@ -44,9 +44,9 @@ def form_edit_get(home_id):
 @app.route('/edit/<int:home_id>', methods=['POST'])
 def form_update_post(home_id):
     cursor = mysql.get_db().cursor()
-    inputData = (request.form.get('fldName'), request.form.get('fldLat'), request.form.get('fldLong'),
-                 request.form.get('fldCountry'), request.form.get('fldAbbreviation'),
-                 request.form.get('fldCapitalStatus'), request.form.get('fldPopulation'), city_id)
+    inputData = (request.form.get('Sell'), request.form.get('List'), request.form.get('Living'),
+                 request.form.get('Rooms'), request.form.get('Beds'),
+                 request.form.get('Baths'), request.form.get('Age'), request.form.get('Acres'), request.form.get('Taxes'), home_id)
     sql_update_query = """UPDATE homes t SET t.Sell = %s, t.List = %s, t.Living = %s, t.Rooms = 
     %s, t.Beds = %s, t.Baths = %s, t.Age = %s, t.Acres = %s,  t.Taxes = %s WHERE t.id = %s """
     cursor.execute(sql_update_query, inputData)
