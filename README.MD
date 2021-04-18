@@ -1,11 +1,3 @@
 # Project Description
-This project is a homework assignment to teach how to get Pycharm setup with Docker, Flask, MySQL, and Postman. We previously followed the professors steps, but this gives us an opportunity to replicate those steps with our own data! 
-
-# Postman Screenshot
-![postman request output](screenshots/postman.png)
-# SQL Data Screenshot
-![pycharm data query](screenshots/query.png)
-# Assignment 2: Web Interface Screenshot
-![pycharm data query](screenshots/Assignment2.png)
-# Assignment 3: Web App with add, update/edit, and delete functionality
-![pycharm data query](screenshots/Assignment3.png)
+This project is a homework assignment to teach how to get Pycharm setup with Docker, Flask, MySQL, and Postman. We previously followed the professors steps, but this gives us an opportunity to replicate those steps with our own data!
+In this project I faced a lot of errors caused by very minor syntax issues. I was missing some commas, had incorrect slashes, etc. Ultimately, I was able to figure these out and was able to run everything successfully! It was a great excercise which really made me understand JSON, the python script's function, as well as how to utilize docker containers.
