@@ -30,7 +30,7 @@ def record_view(home_id):
     cursor = mysql.get_db().cursor()
     cursor.execute('SELECT * FROM homes WHERE id=%s', home_id)
     result = cursor.fetchall()
-    return render_template('view.html', title='View Form', homes=result[0])
+    return render_template('view.html', title='View Form', home=result[0])
 
 
 @app.route('/edit/<int:home_id>', methods=['GET'])
@@ -38,7 +38,7 @@ def form_edit_get(home_id):
     cursor = mysql.get_db().cursor()
     cursor.execute('SELECT * FROM homes WHERE id=%s', home_id)
     result = cursor.fetchall()
-    return render_template('edit.html', title='Edit Form', homes=result[0])
+    return render_template('edit.html', title='Edit Form', home=result[0])
 
 
 @app.route('/edit/<int:home_id>', methods=['POST'])
@@ -100,18 +100,30 @@ def api_retrieve(home_id) -> str:
 
 @app.route('/api/v1/homes/', methods=['POST'])
 def api_add() -> str:
+    cursor = mysql.get_db().cursor()
+    cursor.execute('SELECT * FROM homes WHERE id=%s', home_id)
+    result = cursor.fetchall()
+    json_result = json.dumps(result);
     resp = Response(status=201, mimetype='application/json')
     return resp
 
 
 @app.route('/api/v1/homes/<int:home_id>', methods=['PUT'])
 def api_edit(home_id) -> str:
+    cursor = mysql.get_db().cursor()
+    cursor.execute('SELECT * FROM homes WHERE id=%s', home_id)
+    result = cursor.fetchall()
+    json_result = json.dumps(result);
     resp = Response(status=201, mimetype='application/json')
     return resp
 
 
 @app.route('/api/homes/<int:home_id>', methods=['DELETE'])
 def api_delete(home_id) -> str:
+    cursor = mysql.get_db().cursor()
+    cursor.execute('SELECT * FROM homes WHERE id=%s', home_id)
+    result = cursor.fetchall()
+    json_result = json.dumps(result);
     resp = Response(status=210, mimetype='application/json')
     return resp
 

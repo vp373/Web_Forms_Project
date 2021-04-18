@@ -14,10 +14,10 @@
         <li class="list-group-item">Amount of Taxes: {{ home.Taxes }}</li>
     </ul>
     <div class="card-body">
-        <a href="/edit/{{home.id}}" class="card-link btn btn-primary">Edit</a>
+        <a href="/edit/{{ home.id }}" class="card-link btn btn-primary">Edit</a>
     </div>
 </div>
-<form action="/delete/{{home.id}}" method="post"><button type="submit" class="btn btn-danger">Delete</button></form>
+<form action="/delete/{{ home.id }}" method="post"><button type="submit" class="btn btn-danger">Delete</button></form>
 
 
 {% endblock %}

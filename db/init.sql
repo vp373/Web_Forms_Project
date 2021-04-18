@@ -2,6 +2,7 @@ CREATE DATABASE homesData;
 use homesData;
 
 CREATE TABLE IF NOT EXISTS homes (
+    `id` int AUTO_INCREMENT,
     `Sell` VARCHAR(3) CHARACTER SET utf8,
     `List` INT,
     `Living` INT,
@@ -10,7 +11,8 @@ CREATE TABLE IF NOT EXISTS homes (
     `Baths` INT,
     `Age` INT,
     `Acres` NUMERIC(3, 2),
-    `Taxes` INT
+    `Taxes` INT,
+    PRIMARY KEY (`id`)
 );
 INSERT INTO homes (Sell,List,Living,Rooms,Beds,Baths,Age,Acres,Taxes)VALUES
     ('142', 160, 28, 10, 5, 3,  60, 0.28,  3167),
