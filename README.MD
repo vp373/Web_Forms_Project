@@ -1,5 +1,3 @@
 # Project Description
 This project is a homework assignment to teach how to get Pycharm setup with Docker, Flask, MySQL, and Postman. We previously followed the professors steps, but this gives us an opportunity to replicate those steps with our own data!
 In this project I faced a lot of errors caused by very minor syntax issues. I was missing some commas, had incorrect slashes, etc. Ultimately, I was able to figure these out and was able to run everything successfully! It was a great excercise which really made me understand JSON, the python script's function, as well as how to utilize docker containers.
-
-The REST API branch has the code for the final REST API Assignment. Screenshots of postman are provided in the google doc link provided!
