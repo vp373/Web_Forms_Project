@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
+<body style=" background-color: darkslategray; color: whitesmoke">
 <form action="/homes/new" method="POST">
     <div class="row">
         <div class="col">
@@ -47,8 +48,9 @@
             <input id="Taxes" type="text" class="form-control" placeholder="Amount of Taxes" name="Taxes">
         </div>
     </div>
+    <br>
     <button type="submit" class="btn btn-success">Submit</button>
 
 </form>
-
+</body>
 {% endblock %}
